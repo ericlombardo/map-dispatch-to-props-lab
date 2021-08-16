@@ -49,6 +49,9 @@ export class RestaurantInput extends Component {
   }
 };
 
+const mapDispatchToProps = dispatch => {
+    store.dispatch(addRestaurant({name: 'Blooming Hill', location: 'Blooming Grove, NY'}))
+}
 
 //connect this component by wrapping RestaurantInput below
-export default RestaurantInput
+export default connect(null, mapDispatchToProps)(RestaurantInput)
